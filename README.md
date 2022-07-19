@@ -18,9 +18,9 @@ step 3 : yarn react-native run-android
 - [x] Add Bottom Navigator :tada:
 > ![image](https://user-images.githubusercontent.com/20665341/179675225-8a53f432-c350-4302-aa73-a1edb7c7f818.png)
 - [ ] Add Cart
-- [ ] Add Redux
-- [ ] Add Saga
-- [ ] Add Producs 
+- [x] Add Redux :rofl:
+- [x] Add Saga :muscle:
+- [ ] Add Products 
 - [ ] Add Product Details
 - [ ] Add Order Screen
 - [ ] Add Comment component
