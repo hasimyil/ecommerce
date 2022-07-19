@@ -9,4 +9,5 @@ public class CategoryDto {
     private UUID id;
     private String title;
     private String image;
+    private boolean is_deleted;
 }

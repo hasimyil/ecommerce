@@ -10,6 +10,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.UUID;
 
 @Service
 public class CategoryServiceImpl implements CategoryService {
@@ -21,6 +22,7 @@ public class CategoryServiceImpl implements CategoryService {
     public List<CategoryDto> getAll() {
       var loCategoryList = new ArrayList<CategoryDto>();
       categoryRepository.findAll().forEach(item ->{
+          if(!item.is_deleted())
           loCategoryList.add(modelMapper.map(item,CategoryDto.class));
       });
         return loCategoryList;
@@ -33,5 +35,17 @@ public class CategoryServiceImpl implements CategoryService {
           return   categoryRepository.save(category);
         }
         return null;
+    }
+
+    @Override
+    public Boolean delete(UUID id) {
+        var findCategory = categoryRepository.findById(id);
+        if(findCategory.isPresent()){
+           var loResult = findCategory.get();
+           loResult.set_deleted(true);
+           categoryRepository.save(loResult);
+           return true;
+        }
+        return false;
     }
 }

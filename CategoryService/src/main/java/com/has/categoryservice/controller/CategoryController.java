@@ -7,6 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.UUID;
+
 @RestController
 @RequestMapping("api/v1/category")
 @CrossOrigin
@@ -31,5 +33,14 @@ public class CategoryController {
             return ResponseEntity.ok(new GenericResponse(loResult.size() + " category found!", 200, loResult));
         }
         return ResponseEntity.badRequest().body(new GenericResponse("Category not found!", -1, null));
+    }
+
+    @DeleteMapping("/{id}")
+    public ResponseEntity<?> delete(@PathVariable UUID id){
+        var loResult = categoryService.delete(id);
+        if(loResult){
+            return ResponseEntity.ok(new GenericResponse( "Category Deleted!", 200, loResult));
+        }
+        return ResponseEntity.badRequest().body(new GenericResponse("There is an error while deleting the category!", -1, false));
     }
 }
