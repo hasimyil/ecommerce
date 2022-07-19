@@ -1,0 +1,24 @@
+app:
+  message: Message has been sent Successfully..
+spring:
+  application:
+  name: CategoryService
+  datasource:
+    password: ecommerce1234-
+    url: jdbc:postgresql://postgresql-78373-0.cloudclusters.net:19868/ecommerce
+    username: hasim
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+    defer-datasource-initialization: true
+  sql:
+    init:
+      mode: always
+server:
+  port: 8080
+
