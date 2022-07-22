@@ -2,7 +2,7 @@ app:
   message: Message has been sent Successfully..
 spring:
   application:
-  name: CategoryService
+  name: ProductService
   datasource:
     password: ecommerce1234-
     url: jdbc:postgresql://postgresql-78373-0.cloudclusters.net:19868/ecommerce
@@ -20,5 +20,5 @@ spring:
     init:
       mode: always
 server:
-  port: 8090
+  port: 8091
 

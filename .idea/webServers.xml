@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="153a451d-13e3-48b0-9bfa-45e66f18fbda" name="CloudCluster" url="http://c009ftp.cloudclusters.net">
+        <fileTransfer rootFolder="/CategoryService" accessType="FTPS" host="c009ftp.cloudclusters.net" port="62854">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>

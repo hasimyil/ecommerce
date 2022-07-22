@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="firstCategory">
+    <output-path>$PROJECT_DIR$/out/artifacts/firstCategory</output-path>
+    <root id="archive" name="firstCategory.war">
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/CategoryService/META-INF/MANIFEST.MF" />
+      </element>
+    </root>
+  </artifact>
+</component>
